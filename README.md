@@ -41,38 +41,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/complex-float64-base-mul-add
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-muladd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-mul-add@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var muladd = require( 'path/to/vendor/umd/complex-float64-base-mul-add/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-mul-add@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.muladd;
-})();
-</script>
+var muladd = require( '@stdlib/complex-float64-base-mul-add' );
 ```
 
 #### muladd( alpha, x, y )
@@ -176,14 +170,9 @@ The function supports the following parameters:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var Complex128 = require( '@stdlib/complex-float64-ctor' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
 var muladd = require( '@stdlib/complex-float64-base-mul-add' );
 
 var rand = discreteUniform( -50, 50 );
@@ -198,11 +187,6 @@ for ( i = 0; i < 100; i++ ) {
     z3 = muladd( z1, z2, z2 );
     console.log( '(%s)*(%s) + (%s) = %s', z1.toString(), z2.toString(), z2.toString(), z3.toString() );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -211,7 +195,118 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/complex/float64/base/mul_add.h"
+```
+
+#### stdlib_base_complex128_muladd( alpha, x, y )
+
+Performs a multiply-add operation involving three double-precision complex floating-point numbers.
+
+```c
+#include "stdlib/complex/float64/ctor.h"
+#include "stdlib/complex/float64/real.h"
+#include "stdlib/complex/float64/imag.h"
+
+stdlib_complex128_t z1 = stdlib_complex128( 5.0, 3.0 );
+stdlib_complex128_t z2 = stdlib_complex128( -2.0, 1.0 );
+stdlib_complex128_t z3 = stdlib_complex128( 7.0, -8.0 );
+
+stdlib_complex128_t out = stdlib_base_complex128_muladd( z1, z2, z3 );
+
+double re = stdlib_complex128_real( out );
+// returns -6.0
+
+double im = stdlib_complex128_imag( out );
+// returns -9.0
+```
+
+The function accepts the following arguments:
+
+-   **alpha**: `[in] stdlib_complex128_t` input value.
+-   **z1**: `[in] stdlib_complex128_t` input value.
+-   **z2**: `[in] stdlib_complex128_t` input value.
+
+```c
+stdlib_complex128_t stdlib_base_complex128_muladd( const stdlib_complex128_t alpha, const stdlib_complex128_t x, const stdlib_complex128_t y );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/complex/float64/base/mul_add.h"
+#include "stdlib/complex/float64/ctor.h"
+#include "stdlib/complex/float64/reim.h"
+#include <stdio.h>
+
+int main( void ) {
+    const stdlib_complex128_t x[] = {
+        stdlib_complex128( 3.14, 1.5 ),
+        stdlib_complex128( -3.14, 1.5 ),
+        stdlib_complex128( 0.0, -0.0 ),
+        stdlib_complex128( 0.0/0.0, 0.0/0.0 )
+    };
+
+    stdlib_complex128_t v;
+    stdlib_complex128_t y;
+    double re;
+    double im;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        v = x[ i ];
+        stdlib_complex128_reim( v, &re, &im );
+        printf( "z = %lf + %lfi\n", re, im );
+
+        y = stdlib_base_complex128_muladd( v, v, v );
+        stdlib_complex128_reim( y, &re, &im );
+        printf( "z*z + z = %lf + %lfi\n", re, im );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -293,7 +388,7 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/complex-float64-base-mul-add/main/LICENSE
 
-[@stdlib/complex/float64/ctor]: https://github.com/stdlib-js/complex-float64-ctor/tree/umd
+[@stdlib/complex/float64/ctor]: https://github.com/stdlib-js/complex-float64-ctor
 
 <!-- <related-links> -->
 
