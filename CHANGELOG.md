@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-08)
+## Unreleased (2025-06-26)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`46ff8ea`](https://github.com/stdlib-js/stdlib/commit/46ff8ea7761ae438c4718681c5890f146fb0985e) - **docs:** minor clean-up _(by Philipp Burckhardt)_
 -   [`f482c99`](https://github.com/stdlib-js/stdlib/commit/f482c9978e9ff27b9c9bf4afe03a6ee8e79f254a) - **docs:** update examples for `complex/float64/base/mul-add` [(#7267)](https://github.com/stdlib-js/stdlib/pull/7267) _(by Shabareesh Shetty)_
 -   [`8bf8f93`](https://github.com/stdlib-js/stdlib/commit/8bf8f93d8fe5b05cd7de8347abb65255ec3b06aa) - **docs:** change examples for `complex/float64/base/mul-add` [(#7191)](https://github.com/stdlib-js/stdlib/pull/7191) _(by Shabareesh Shetty)_
 -   [`a1e230f`](https://github.com/stdlib-js/stdlib/commit/a1e230f29297caa89880e9c194c615a0400fb7bc) - **chore:** clean up cppcheck-suppress comments _(by Karan Anand)_
@@ -39,10 +40,11 @@
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Karan Anand
+-   Philipp Burckhardt
 -   Shabareesh Shetty
 
 </section>
