@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-26)
+## Unreleased (2025-07-13)
 
 <section class="features">
 
@@ -16,12 +16,23 @@
 
 <!-- /.features -->
 
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`2a0ea7f`](https://github.com/stdlib-js/stdlib/commit/2a0ea7feb22806685fef9eac8a32d7012dab7adc) - use correct package names in package.json
+
+</section>
+
+<!-- /.bug-fixes -->
+
 <section class="commits">
 
 ### Commits
 
 <details>
 
+-   [`2a0ea7f`](https://github.com/stdlib-js/stdlib/commit/2a0ea7feb22806685fef9eac8a32d7012dab7adc) - **fix:** use correct package names in package.json _(by Philipp Burckhardt)_
 -   [`46ff8ea`](https://github.com/stdlib-js/stdlib/commit/46ff8ea7761ae438c4718681c5890f146fb0985e) - **docs:** minor clean-up _(by Philipp Burckhardt)_
 -   [`f482c99`](https://github.com/stdlib-js/stdlib/commit/f482c9978e9ff27b9c9bf4afe03a6ee8e79f254a) - **docs:** update examples for `complex/float64/base/mul-add` [(#7267)](https://github.com/stdlib-js/stdlib/pull/7267) _(by Shabareesh Shetty)_
 -   [`8bf8f93`](https://github.com/stdlib-js/stdlib/commit/8bf8f93d8fe5b05cd7de8347abb65255ec3b06aa) - **docs:** change examples for `complex/float64/base/mul-add` [(#7191)](https://github.com/stdlib-js/stdlib/pull/7191) _(by Shabareesh Shetty)_
