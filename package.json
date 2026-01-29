@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/complex-float64-base-mul-add",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Perform a multiply-add operation involving three double-precision complex floating-point numbers.",
   "license": "Apache-2.0",
   "author": {
@@ -44,10 +44,10 @@
     "@stdlib/complex-float64-imag": "^0.1.1",
     "@stdlib/complex-float64-real": "^0.1.1",
     "@stdlib/complex-float64-reim": "^0.1.2",
-    "@stdlib/math-base-napi-ternary": "^0.3.0",
+    "@stdlib/math-base-napi-ternary": "^0.3.1",
     "@stdlib/types": "^0.4.3",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2",
-    "@stdlib/utils-library-manifest": "^0.2.2"
+    "@stdlib/utils-library-manifest": "^0.2.3"
   },
   "devDependencies": {
     "@stdlib/array-complex128": "^0.3.0",
