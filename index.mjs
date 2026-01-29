@@ -1,0 +1,4 @@
+// Copyright (c) 2026 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
+/// <reference types="./index.d.ts" />
+import t from"https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-nonenumerable-read-only-property@v0.2.1-esm/index.mjs";import e from"https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@v0.0.3-esm/index.mjs";import s from"https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-real@v0.1.1-esm/index.mjs";import n from"https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-imag@v0.1.1-esm/index.mjs";function r(t,r,i){var o=s(t),d=n(t),m=s(r),l=n(r),p=s(i),a=n(i);return new e(o*m-d*l+p,o*l+d*m+a)}function i(t,e,s,n,r,i,o,d,m){return o[m]=t*s-e*n+r,o[m+d]=t*n+e*s+i,o}function o(t,e,s,n,r,i,o,d,m,l,p,a){var f=t[s],j=t[s+e],c=n[i],v=n[i+r],u=o[m],h=o[m+d];return l[a]=f*c-j*v+u,l[a+p]=f*v+j*c+h,l}t(r,"assign",i),t(r,"strided",o);export{i as assign,r as default,o as strided};
+//# sourceMappingURL=index.mjs.map
