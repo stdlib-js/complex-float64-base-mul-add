@@ -50,6 +50,11 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
+muladd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-mul-add@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/complex-float64-base-mul-add/tags). For example,
+
+```javascript
 muladd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-mul-add@v0.1.1-umd/browser.js' )
 ```
 
@@ -62,7 +67,7 @@ var muladd = require( 'path/to/vendor/umd/complex-float64-base-mul-add/index.js'
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-mul-add@v0.1.1-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-mul-add@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -175,7 +180,7 @@ The function supports the following parameters:
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-mul-add@v0.1.1-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-base-mul-add@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
