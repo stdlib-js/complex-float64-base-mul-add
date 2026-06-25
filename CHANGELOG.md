@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-06-18)
+## Unreleased (2026-06-25)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`f30fe01`](https://github.com/stdlib-js/stdlib/commit/f30fe0156a585359cbaac81f385926458ed7f26e) - **refactor:** simplify strided array type signatures [(#13128)](https://github.com/stdlib-js/stdlib/pull/13128) _(by Karan Anand)_
 -   [`f4bc442`](https://github.com/stdlib-js/stdlib/commit/f4bc442f019061ce55cc1a654722a325e35fd5f0) - **test:** remove redundant filename output in test blocks [(#12951)](https://github.com/stdlib-js/stdlib/pull/12951) _(by Abdul Kaium)_
 -   [`9f41dab`](https://github.com/stdlib-js/stdlib/commit/9f41daba5e816a9e63c3b0fbfb810cee8bb01258) - **bench:** refactor to use string interpolation in `complex` [(#11620)](https://github.com/stdlib-js/stdlib/pull/11620) _(by Karan Anand)_
 
